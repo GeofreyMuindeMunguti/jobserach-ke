@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+
+<head>
+<title>JOBSEARCH | Sign Up</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<!-- Display something in the slideshow for IE9 -->
+<!--[if lt IE 10]>
+<link href="layout/styles/ie9.css" rel="stylesheet" type="text/css" media="all">
+<![endif]-->
+    <script> function validateemail() 
+        { 
+            var x=document.signup.email.value; 
+            var atposition=x.indexOf("@"); 
+            var dotposition=x.lastIndexOf("."); 
+            if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){ 
+                alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition); 
+            return false; 
+            } 
+        } 
+    </script>
+</head>
+<body id="top" class="bgded fixed" style="background-image:url('images/demo/backgrounds/01.jpg');">
+<div class="wrapper row0">
+  <div id="topbar" class="clear"> 
+    <div class="fl_left">
+      <ul class="faico clear">
+        <li><a href="https://web.facebook.com/Jobsearch-page-142603759793213/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
+        <li><a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.dribbble.com"><i class="fa fa-dribbble"></i></a></li>
+        <li><a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+        <li><a href="https://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="fl_right">
+      <ul class="faico clear">
+        <li><a href="login.php" title="Login"><i class="fa fa-sign-in"></i></a></li>
+       
+       
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <div class="spacer">
+    <header id="header" class="clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="index.php">JOBSEARCH</a></h1>
+      </div>
+     
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <div class="spacer">
+    <nav id="mainav" class="clear"> 
+      <!-- ################################################################################################ -->
+      <ul class="clear">
+        <li class="active"><a href="index.php">Home</a></li>
+       
+            <li><a href="pages/contactus.php">Contact us</a></li>
+            <li><a href="pages/employerpage.php">Employer page</a></li>
+            <li><a href="pages/jobseekerpage.php">Jobseeker page</a></li>
+            
+      
+        </li>
+       
+        <li><a href="https://www.google.co.ke/maps/place/Madaraka+Central+Court/@-1.307357,36.8133295,17z/data=!3m1!4b1!4m5!3m4!1s0x182f10f9f2ea8a3b:0xe4a075a77652b78b!8m2!3d-1.3073624!4d36.8155182?hl=en" target="_blank">Offices Location</a></li>
+      </ul>
+      <!-- ################################################################################################ -->
+    </nav>
+  </div>
+</div>
+
+<h2><center>Sign up Form</center></h2>
+<div class="wrapper row3">
+  <div class="spacer">
+    <main class="container clear"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="content"> 
+<form action="signup.php" style="border:1px solid #ccc" method = "post">
+  <div class="container">
+    <p><h3>THIS IS THE SIGN UP FORM</p></h3><br />
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id ="emailmsg" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id= "passwdmsg" required>
+
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="repsw" id="repasswdmsg" required>
+    <center>Sign up as either jobseeker or employer</center>
+    <input type="radio" name="category" value="jobseeker"> Jobseeker
+    <input type="radio" name="category" value="employer"> Employer
+   
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</form>
+<div class="wrapper row5">
+  <div class="spacer">
+    <footer id="footer" class="clear"> 
+      <!-- ################################################################################################ -->
+      <div class="one_quarter first">
+        <h6 class="title">Created by</h6>
+        <address class="btmspace-15">
+        GEOFREYBRIAN>.Co<br>
+        Ole Sangale Rd &amp; 001<br>
+        Nairobi<br>
+        PO BOX 111 NAIROBI
+        </address>
+        <ul class="nospace">
+          <li class="btmspace-10"><span class="fa fa-phone"></span> +254 (711) 421 684</li>
+          <li><span class="fa fa-envelope-o"></span> muinde.geofrey@strathmore.edu</li>
+        </ul>
+      </div>
+      <div class="one_quarter">
+        <h6 class="title">Website hosted by</h6>
+        <ul class="nospace linklist">
+          <li><a href="#">Geofrey Muinde</a></li>
+          <li><a href="#">Brian Munyi</a></li>
+          <li><a href="#">Philip Njoroge</a></li>
+          <li><a href="#">Humphrey Nyakundi</a></li>
+          <li><a href="#">Shawn Shivere</a></li>
+        </ul>
+      </div>
+     
+    <div class="one_quarter">
+        <h6 class="title">Send us your contact for guidance</h6>
+        <form method="post" action="pages/guidance.php">
+          <fieldset>
+            <legend>Newsletter:</legend>
+            <input class="btmspace-15" type="text" value="" name="name" placeholder="name"></input>
+            <input class="btmspace-15" type="text" value="" name="email" placeholder="email">
+                   <input class="btmspace-15" type="text" value="" name="field" placeholder="how can we help you...">
+            <button type="submit" value="submit">Submit</button>
+          </fieldset>
+        </form>
+      </div>
+      </div>
+      <!-- ################################################################################################ -->
+    </footer>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div class="spacer">
+    <div id="copyright" class="clear"> 
+      <!-- ################################################################################################ -->
+      <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved - <a href="#">GEOFREYBRIAN.Co</a></p>
+      <p class="fl_right">Website by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">GEOBRIAN.Co</a></p>
+      <!-- ################################################################################################ -->
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- IE9 Placeholder Support -->
+<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<!-- / IE9 Placeholder Support -->
+</body>
+</html>
+</body>
+
+</html>
+
+</body>
+</html>
