@@ -142,7 +142,7 @@ Licence URI: http://www.os-templates.com/template-terms
   <div>
         <?php
 
-$link = mysqli_connect("localhost", "root", "", "jobsearch");
+$link = mysqli_connect("https://db4free.net/phpMyAdmin/", "jobsearch","geofrey7543");
  
 // Check connection
 if($link === false){
@@ -192,7 +192,7 @@ mysqli_close($link);
 
         <?php
 
-$link = mysqli_connect("localhost", "root", "", "jobsearch");
+$link = mysqli_connect("https://db4free.net/phpMyAdmin/", "jobsearch","geofrey7543");
  
 // Check connection
 if($link === false){

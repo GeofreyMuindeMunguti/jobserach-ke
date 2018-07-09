@@ -1,5 +1,5 @@
 <?php 
- $connect = mysqli_connect("localhost", "root", "", "jobsearch") or die("Please, check your server connection."); 
+ $connect = mysqli_connect("https://db4free.net/phpMyAdmin/", "jobsearch","geofrey7543") or die("Please, check your server connection."); 
 $topsearch=$_POST['topsearch'];
 $query = "select * from employers where "; 
 $query_fields = Array(); $sql = "SHOW COLUMNS FROM ";                               
