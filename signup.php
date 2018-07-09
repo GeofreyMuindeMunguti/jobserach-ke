@@ -1,6 +1,6 @@
 <?php	
 
-$db=mysqli_connect("https://db4free.net/phpMyAdmin/", "jobsearch","geofrey7543")  or die ("Could not connect to database");
+$db=mysqli_connect("localhost", "root","")  or die ("Could not connect to database");
 mysqli_select_db($db,'jobsearch') or die('Error selecting database : ' . mysqli_error());
     
 $email = $_POST['email'];

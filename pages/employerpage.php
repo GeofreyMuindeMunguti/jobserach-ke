@@ -156,7 +156,7 @@ Licence URI: http://www.os-templates.com/template-terms
         <h1>Job adverts</h1>
      <?php
 
-$link = mysqli_connect("https://db4free.net/phpMyAdmin/", "jobsearch","geofrey7543");
+$link = mysqli_connect("localhost", "root", "", "jobsearch");
  
 // Check connection
 if($link === false){

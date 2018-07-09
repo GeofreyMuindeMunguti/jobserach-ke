@@ -163,7 +163,7 @@ button {
     <tbody>
       <<h2><center>Jobs posted by possible employers </center> </h2>
         <?php
-        $db=mysqli_connect("https://db4free.net/phpMyAdmin/", "jobsearch","geofrey7543")  or die ("Could not connect to database");
+        $db=mysqli_connect("localhost", "root","")  or die ("Could not connect to database");
         mysqli_select_db($db,'jobsearch') or die('Error selecting database : ' . mysqli_error());
         
         if(isset($_POST['topsearch']))
